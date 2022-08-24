@@ -1,0 +1,10 @@
+<%= render 'shared/navbar' %>
+<div class="container bg-light">
+  <ol>
+    <% @restaurants.each do |restaurant| %>
+
+      <li class="link-secondary"><%= link_to restaurant.name, restaurant_path(restaurant[:id]), class: "link-secondary"  %></li>
+
+    <%end%>
+  </ol>
+</div>

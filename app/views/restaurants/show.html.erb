@@ -1,0 +1,22 @@
+<%= render 'shared/navbar' %>
+<div class="container bg-light">
+ <h1><%= @restaurant[:name]  %> </h1>
+ <%= @restaurant[:category]  %>
+ <br>
+ <%= @restaurant[:address]  %>
+ <br>
+ <%= @restaurant[:phone_number]  %>
+ <br>
+
+<ol>
+    <% @reviews.each do |review| %>
+
+      <li> <%= review[:rating]  %></li>
+      <p><%= review[:content] %> </p>
+      <br>
+
+    <%end%>
+  </ol>
+
+
+</div>
